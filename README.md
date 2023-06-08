@@ -1,3 +1,5 @@
+## EX.NO: 05<br>
+## DATE: 
 # <p align="center">Image-Transformation
 ## Aim
 To perform image transformation such as Translation, Scaling, Shearing, Reflection, Rotation and Cropping using OpenCV and Python.
