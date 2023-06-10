@@ -1,5 +1,5 @@
 ## EX.NO: 05<br>
-## DATE: 
+## DATE: 05.04.2023
 # <p align="center">Image-Transformation
 ## Aim
 To perform image transformation such as Translation, Scaling, Shearing, Reflection, Rotation and Cropping using OpenCV and Python.
@@ -43,8 +43,9 @@ Display all the Transformed images.
 ## Program:
 ### Developed By: M VIGNESH
 ### Register Number: 212220233002
+
+### i)Image Translation
 ```python
-i)Image Translation
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
@@ -59,20 +60,26 @@ translation_matrix=np.float32(([1,0,100],[0,1,200],[0,0,1]))
 translated_img=cv2.warpPerspective(img,translation_matrix,(cols,rows))
 plt.axis("off")
 plt.imshow(translated_img)
-
-ii) Image Scaling
+```
+  
+### ii) Image Scaling
+```PYTHON
 scaling_matrix=np.float32([[1.2,0,0],[0,1.2,0],[0,0,1]])
 scaled_img=cv2.warpPerspective(img,scaling_matrix,(cols,rows))
 plt.axis("off")
 plt.imshow(scaled_img)
-
-iii)Image shearing
+```
+  
+### iii)Image shearing
+```PYTHON
 shearing_matrix=np.float32([[1,0.2,0],[0.2,1,0],[0,0,1]])
 sheared_img=cv2.warpPerspective(img,shearing_matrix,(cols*2,int(rows*1.5)))
 plt.axis("off")
 plt.imshow(sheared_img)
-
-iv)Image Reflection
+```
+  
+### iv)Image Reflection
+```PYTHON
 reflection_matrix_col=np.float32([[-1,0,cols],[0,1,0],[0,0,1]])
 reflected_img_col=cv2.warpPerspective(img,reflection_matrix_col,(cols,int(rows)))
 plt.axis("off")
@@ -81,8 +88,10 @@ reflection_matrix_row=np.float32([[1,0,0],[0,-1,rows],[0,0,1]])
 reflected_img_row=cv2.warpPerspective(img,reflection_matrix_row,(cols,int(rows)))
 plt.axis("off")
 plt.imshow(reflected_img_row)
-
-v)Image Rotation
+```
+  
+### v)Image Rotation
+```PYTHON
 rotation_angle=np.radians(10)
 rotation_matrix=np.float32([[np.cos(rotation_angle),-np.sin(rotation_angle),0],
                                 [np.sin(rotation_angle),np.cos(rotation_angle),0],
@@ -90,8 +99,10 @@ rotation_matrix=np.float32([[np.cos(rotation_angle),-np.sin(rotation_angle),0],
 rotated_img=cv2.warpPerspective(img,rotation_matrix,(cols,(rows)))
 plt.axis("off")
 plt.imshow(rotated_img)
-
-vi)Image Cropping
+```
+  
+### vi)Image Cropping
+```PYTHON
 cropped_img=img[10:350,320:560]
 plt.axis("off")
 plt.imshow(cropped_img))
